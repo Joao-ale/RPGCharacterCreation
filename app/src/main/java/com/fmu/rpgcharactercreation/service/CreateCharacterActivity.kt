@@ -1,16 +1,25 @@
 package com.fmu.rpgcharactercreation.service
 
+import android.os.Bundle
+import android.widget.Button
+import android.widget.EditText
+import android.widget.Spinner
 import androidx.appcompat.app.AppCompatActivity
+import com.fmu.rpgcharactercreation.R
+import com.fmu.rpgcharactercreation.dao.CharacterDao
+import com.fmu.rpgcharactercreation.dataBase.DatabaseBuilder
 import com.fmu.rpgcharactercreation.enum.CharacterClass
 import com.fmu.rpgcharactercreation.enum.Origin
 import com.fmu.rpgcharactercreation.model.Attribute
-import com.fmu.rpgcharactercreation.model.Skill
+import com.fmu.rpgcharactercreation.model.Character
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class CreateCharacterActivity : AppCompatActivity() {
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_create_character)
+        val characterDao = DatabaseBuilder.getInstance(this).characterDao()
 
         val etCharacterName: EditText = findViewById(R.id.etCharacterName)
         val etPlayerName: EditText = findViewById(R.id.etPlayerName)
@@ -21,12 +30,11 @@ class CreateCharacterActivity : AppCompatActivity() {
         val spinnerClass: Spinner = findViewById(R.id.spinnerClass)
         val btnSubmit: Button = findViewById(R.id.btnSubmit)
 
-        // Inicializar os spinners com enum
-        val originAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, Origin.values())
-        spinnerOrigin.adapter = originAdapter
-
-        val classAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, CharacterClass.values())
-        spinnerClass.adapter = classAdapter
+        val etStrength: EditText = findViewById(R.id.etStrength)
+        val etAgility: EditText = findViewById(R.id.etAgility)
+        val etIntellect: EditText = findViewById(R.id.etIntellect)
+        val etVigor: EditText = findViewById(R.id.etVigor)
+        val etPresence: EditText = findViewById(R.id.etPresence)
 
         btnSubmit.setOnClickListener {
             val characterName = etCharacterName.text.toString()
@@ -37,22 +45,18 @@ class CreateCharacterActivity : AppCompatActivity() {
             val origin = spinnerOrigin.selectedItem as Origin
             val characterClass = spinnerClass.selectedItem as CharacterClass
 
+            val strength = etStrength.text.toString().toIntOrNull() ?: 1
+            val agility = etAgility.text.toString().toIntOrNull() ?: 1
+            val intellect = etIntellect.text.toString().toIntOrNull() ?: 1
+            val vigor = etVigor.text.toString().toIntOrNull() ?: 1
+            val presence = etPresence.text.toString().toIntOrNull() ?: 1
+
             val attributes = listOf(
-                Attribute(
-                    "Força", 1
-                ),
-                Attribute(
-                    "Agilidade", 1
-                ),
-                Attribute(
-                    "Intelecto", 1
-                ),
-                Attribute(
-                    "Vigor", 1
-                ),
-                Attribute(
-                    "Presença", 1
-                )
+                Attribute("Força", strength),
+                Attribute("Agilidade", agility),
+                Attribute("Intelecto", intellect),
+                Attribute("Vigor", vigor),
+                Attribute("Presença", presence)
             )
 
             val character = Character(
@@ -63,16 +67,16 @@ class CreateCharacterActivity : AppCompatActivity() {
                 history = history,
                 attributes = attributes,
                 origin = origin,
-                skills = skills,
                 characterClass = characterClass
             )
 
-            // Faça algo com o objeto Character, como salvar no banco de dados
-            saveCharacter(character)
+            saveCharacter(character, characterDao)
         }
     }
 
-//    private fun saveCharacter(character: Character) {
-//        // Lógica para salvar no banco de dados ou enviar para API
-//    }
+    private fun saveCharacter(character: Character, characterDao: CharacterDao) {
+        CoroutineScope(Dispatchers.IO).launch {
+            characterDao.insert(character)
+        }
+    }
 }

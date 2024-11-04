@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Campo para o Nome do Personagem -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome do Personagem" />
+
+        <EditText
+            android:id="@+id/etCharacterName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite o nome do personagem" />
+
+        <!-- Campo para o Nome do Jogador -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nome do Jogador" />
+
+        <EditText
+            android:id="@+id/etPlayerName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Digite o nome do jogador" />
+
+        <!-- Campo para Aparência -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Aparência" />
+
+        <EditText
+            android:id="@+id/etAppearance"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descreva a aparência" />
+
+        <!-- Campo para Personalidade -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Personalidade" />
+
+        <EditText
+            android:id="@+id/etPersonality"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descreva a personalidade" />
+
+        <!-- Campo para História -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="História" />
+
+        <EditText
+            android:id="@+id/etHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Conte a história do personagem" />
+
+        <!-- Campo para Origem -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Origem" />
+
+        <Spinner
+            android:id="@+id/spinnerOrigin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Classe" />
+
+        <Spinner
+            android:id="@+id/spinnerClass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Atributos -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Atributos" />
+
+        <!-- Atributos Numéricos -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Força -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Força" />
+            <EditText
+                android:id="@+id/etStrength"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="1"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Agilidade"
+                tools:ignore="HardcodedText" />
+            <EditText
+                android:id="@+id/etAgility"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="1"
+                tools:ignore="HardcodedText" />
+
+
+            <!-- Intelecto -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Intelecto" />
+            <EditText
+                android:id="@+id/etIntellect"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="1" />
+
+            <!-- Vigor -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vigor" />
+            <EditText
+                android:id="@+id/etVigor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="1" />
+
+            <!-- Presença -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Presença" />
+            <EditText
+                android:id="@+id/etPresence"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:text="1" />
+        </LinearLayout>
+
+        <!-- Botão de Envio -->
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Criar Personagem" />
+    </LinearLayout>
+</ScrollView>
