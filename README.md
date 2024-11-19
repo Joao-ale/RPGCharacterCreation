@@ -3,6 +3,13 @@
 
 Este é um aplicativo Android para a criação de personagens de RPG, especificamente para o universo de **Ordem Paranormal**. O aplicativo permite que os jogadores criem e personalizem seus personagens com base em atributos, classes, origens e habilidades.
 
+Alunos responsáveis:
+Alfeson Luiz Araujo de Macedo - 1813166
+Fabio Luis Amaro de Lima Silva Santana - 1654284
+Giovanna de Oliveira Ardesore - 6694107
+João Alexandre Silva de Santana - 1841102
+Leticia Alves de Sena - 1701283
+
 ## Sumário
 
 - [Visão Geral](#visão-geral)
