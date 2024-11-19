@@ -1,4 +1,18 @@
 <resources>
-    <string name="app_name">RPGCharacterCreation</string>
-    <string name="_1">1</string>
+    <string name="app_name">RPG Character Creation</string>
+    <string name="hint_character_name">Digite o nome do personagem</string>
+    <string name="hint_player_name">Digite o nome do jogador</string>
+    <string name="hint_appearance">Descreva a aparência</string>
+    <string name="hint_personality">Descreva a personalidade</string>
+    <string name="hint_history">Conte a história do personagem</string>
+    <string name="btn_create_character">Criar Personagem</string>
+    <string name="label_origin">Origem</string>
+    <string name="label_class">Classe</string>
+    <string name="label_attributes">Atributos</string>
+    <string name="label_strength">Força</string>
+    <string name="label_agility">Agilidade</string>
+    <string name="label_intellect">Intelecto</string>
+    <string name="label_vigor">Vigor</string>
+    <string name="label_presence">Presença</string>
+    <string name="defaultAttributesValues">1</string>
 </resources>

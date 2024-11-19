@@ -4,7 +4,10 @@ import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Spinner
+import android.widget.ArrayAdapter
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import com.fmu.rpgcharactercreation.R
 import com.fmu.rpgcharactercreation.dao.CharacterDao
 import com.fmu.rpgcharactercreation.dataBase.DatabaseBuilder
@@ -12,13 +15,13 @@ import com.fmu.rpgcharactercreation.enum.CharacterClass
 import com.fmu.rpgcharactercreation.enum.Origin
 import com.fmu.rpgcharactercreation.model.Attribute
 import com.fmu.rpgcharactercreation.model.Character
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class CreateCharacterActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_create_character)
+
         val characterDao = DatabaseBuilder.getInstance(this).characterDao()
 
         val etCharacterName: EditText = findViewById(R.id.etCharacterName)
@@ -36,12 +39,26 @@ class CreateCharacterActivity : AppCompatActivity() {
         val etVigor: EditText = findViewById(R.id.etVigor)
         val etPresence: EditText = findViewById(R.id.etPresence)
 
+        val originAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, Origin.values())
+        originAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerOrigin.adapter = originAdapter
+
+        val classAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, CharacterClass.values())
+        classAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerClass.adapter = classAdapter
+
         btnSubmit.setOnClickListener {
-            val characterName = etCharacterName.text.toString()
-            val playerName = etPlayerName.text.toString()
-            val appearance = etAppearance.text.toString()
-            val personality = etPersonality.text.toString()
-            val history = etHistory.text.toString()
+            val characterName = etCharacterName.text.toString().trim()
+            val playerName = etPlayerName.text.toString().trim()
+            val appearance = etAppearance.text.toString().trim()
+            val personality = etPersonality.text.toString().trim()
+            val history = etHistory.text.toString().trim()
+
+            if (characterName.isEmpty() || playerName.isEmpty() || appearance.isEmpty() || personality.isEmpty() || history.isEmpty()) {
+                Toast.makeText(this, "Por favor, preencha todos os campos!", Toast.LENGTH_SHORT).show()
+                return@setOnClickListener
+            }
+
             val origin = spinnerOrigin.selectedItem as Origin
             val characterClass = spinnerClass.selectedItem as CharacterClass
 
@@ -75,8 +92,9 @@ class CreateCharacterActivity : AppCompatActivity() {
     }
 
     private fun saveCharacter(character: Character, characterDao: CharacterDao) {
-        CoroutineScope(Dispatchers.IO).launch {
+        lifecycleScope.launch {
             characterDao.insert(character)
+            Toast.makeText(this@CreateCharacterActivity, "Personagem criado com sucesso!", Toast.LENGTH_SHORT).show()
         }
     }
 }

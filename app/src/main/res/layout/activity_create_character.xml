@@ -14,77 +14,88 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome do Personagem" />
+            android:text="@string/hint_character_name" />
 
         <EditText
             android:id="@+id/etCharacterName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Digite o nome do personagem" />
+            android:inputType="text"
+            android:autofillHints="name"
+            android:hint="@string/hint_character_name" />
 
         <!-- Campo para o Nome do Jogador -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Nome do Jogador" />
+            android:text="@string/hint_player_name" />
 
         <EditText
             android:id="@+id/etPlayerName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Digite o nome do jogador" />
+            android:inputType="text"
+            android:autofillHints="name"
+            android:hint="@string/hint_player_name" />
 
         <!-- Campo para Aparência -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Aparência" />
+            android:text="@string/hint_appearance" />
 
         <EditText
             android:id="@+id/etAppearance"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Descreva a aparência" />
+            android:inputType="text"
+            android:autofillHints="appearance"
+            android:hint="@string/hint_appearance" />
 
         <!-- Campo para Personalidade -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Personalidade" />
+            android:text="@string/hint_personality" />
 
         <EditText
             android:id="@+id/etPersonality"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Descreva a personalidade" />
+            android:inputType="text"
+            android:autofillHints="personality"
+            android:hint="@string/hint_personality" />
 
         <!-- Campo para História -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="História" />
+            android:text="@string/hint_history" />
 
         <EditText
             android:id="@+id/etHistory"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Conte a história do personagem" />
+            android:inputType="text"
+            android:autofillHints="history"
+            android:hint="@string/hint_history" />
 
         <!-- Campo para Origem -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Origem" />
+            android:text="@string/label_origin" />
 
         <Spinner
             android:id="@+id/spinnerOrigin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
+        <!-- Campo para Classe -->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Classe" />
+            android:text="@string/label_class" />
 
         <Spinner
             android:id="@+id/spinnerClass"
@@ -95,7 +106,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Atributos" />
+            android:text="@string/label_attributes" />
 
         <!-- Atributos Numéricos -->
         <LinearLayout
@@ -103,75 +114,80 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <!-- Força -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Força" />
+                android:text="@string/label_strength" />
             <EditText
                 android:id="@+id/etStrength"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:autofillHints=""
                 android:text="1"
                 tools:ignore="HardcodedText" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Agilidade"
-                tools:ignore="HardcodedText" />
+                android:text="@string/label_agility" />
             <EditText
                 android:id="@+id/etAgility"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
+                android:autofillHints=""
                 android:text="1"
                 tools:ignore="HardcodedText" />
 
-
-            <!-- Intelecto -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Intelecto" />
+                android:text="@string/label_intellect" />
             <EditText
                 android:id="@+id/etIntellect"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:text="1" />
+                android:autofillHints=""
+                android:text="1"
+                tools:ignore="HardcodedText" />
 
-            <!-- Vigor -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vigor" />
+                android:text="@string/label_vigor" />
             <EditText
                 android:id="@+id/etVigor"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:text="1" />
+                android:autofillHints=""
+                android:text="1"
+                tools:ignore="HardcodedText" />
 
-            <!-- Presença -->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Presença" />
+                android:text="@string/label_presence" />
             <EditText
                 android:id="@+id/etPresence"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:inputType="number"
-                android:text="1" />
+                android:autofillHints=""
+                android:text="1"
+                tools:ignore="HardcodedText" />
         </LinearLayout>
 
         <!-- Botão de Envio -->
         <Button
             android:id="@+id/btnSubmit"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Criar Personagem" />
+            android:text="@string/btn_create_character"
+            android:minHeight="48dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp" />
     </LinearLayout>
 </ScrollView>

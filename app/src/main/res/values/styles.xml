@@ -1,0 +1,9 @@
+<resources>
+    <!-- Tema personalizado que herda de Theme.AppCompat -->
+    <style name="Theme.RPGCharacterCreation" parent="Theme.AppCompat.Light">
+        <!-- Defina outras propriedades personalizadas aqui -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+</resources>
