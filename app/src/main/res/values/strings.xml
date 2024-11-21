@@ -23,4 +23,11 @@
     <string name="pr_ximo">Próximo</string>
     <string name="personagens">Personagens</string>
     <string name="plus">+</string>
+    <string name="texto_aqui">Texto aqui</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
+    <string name="login">Login</string>
+    <string name="campo_de_senha">Campo de senha</string>
+    <string name="campo_de_e_mail">Campo de e-mail</string>
+    <string name="imagem_guerreiros_enfrentando_um_drag_o">Imagem guerreiros enfrentando um dragão</string>
 </resources>

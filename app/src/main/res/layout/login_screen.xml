@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="288dp"
+        android:contentDescription="@string/imagem_guerreiros_enfrentando_um_drag_o"
+        app:srcCompat="@drawable/login_image" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/email" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:importantForAutofill="yes"
+        android:contentDescription="@string/campo_de_e_mail"
+        android:inputType="textEmailAddress" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/senha" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="password"
+        android:ems="10"
+        android:importantForAutofill="yes"
+        android:contentDescription="@string/campo_de_senha"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content"
+        android:text="@string/login" />
+</LinearLayout>

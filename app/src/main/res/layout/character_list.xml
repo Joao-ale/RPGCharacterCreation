@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:baselineAligned="false"
@@ -13,28 +14,50 @@
         android:text="@string/personagens"
         android:textAlignment="center"
         android:textSize="34sp"
-        android:typeface="normal" />
+        android:typeface="normal"
+        tools:ignore="TextSizeCheck" />
 
     <androidx.cardview.widget.CardView
         android:layout_width="362dp"
         android:layout_height="137dp"
-        app:cardCornerRadius="30dp" />
+        android:layout_margin="16dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp">
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="360dp"
-        android:layout_height="143dp"
-        app:cardCornerRadius="30dp" />
 
-    <androidx.cardview.widget.CardView
-        android:layout_width="362dp"
-        android:layout_height="174dp"
-        app:cardCornerRadius="30dp">
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="@string/texto_aqui"
+            android:textColor="#000"
+            android:textSize="16sp" />
 
     </androidx.cardview.widget.CardView>
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="362dp"
+        android:layout_height="137dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp"
+        android:layout_margin="16dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="362dp"
+        android:layout_height="137dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="8dp"
+        android:layout_margin="16dp"/>
+
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
+        android:layout_width="52dp"
         android:layout_height="wrap_content"
-        android:text="@string/plus" />
+        android:background="@drawable/rounded_button"
+        android:padding="10dp"
+        android:text="@string/plus"
+        android:textColor="@android:color/white" />
+
 </LinearLayout>
