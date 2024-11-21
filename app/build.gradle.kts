@@ -69,6 +69,7 @@ dependencies {
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.recyclerview)
     implementation(libs.gson)
+    implementation(libs.androidx.cardview)
 
     // Testes
     testImplementation(libs.junit)
