@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:adjustViewBounds='true'
+        android:contentDescription="@string/espada_e_livro_rpg"
         app:srcCompat="@drawable/captura_de_tela_2024_11_19_142734" />
 
 

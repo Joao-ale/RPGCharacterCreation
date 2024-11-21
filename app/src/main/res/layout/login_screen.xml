@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -13,35 +14,40 @@
         app:srcCompat="@drawable/login_image" />
 
     <TextView
-        android:id="@+id/textView3"
-        android:layout_width="match_parent"
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/email" />
+        android:text="@string/campo_de_e_mail" />
 
     <EditText
         android:id="@+id/editTextTextEmailAddress"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="54dp"
+        android:autofillHints="email"
+        android:contentDescription="@string/campo_de_e_mail"
         android:ems="10"
         android:importantForAutofill="yes"
-        android:contentDescription="@string/campo_de_e_mail"
-        android:inputType="textEmailAddress" />
+        android:inputType="textEmailAddress"
+        android:labelFor="@id/emailLabel"
+        tools:ignore="EditableContentDescCheck,LabelFor" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="match_parent"
+        android:id="@+id/passwordLabel"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/senha" />
+        android:text="@string/campo_de_senha" />
 
     <EditText
         android:id="@+id/editTextTextPassword"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="69dp"
         android:autofillHints="password"
+        android:contentDescription="@string/campo_de_senha"
         android:ems="10"
         android:importantForAutofill="yes"
-        android:contentDescription="@string/campo_de_senha"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:labelFor="@id/passwordLabel"
+        tools:ignore="EditableContentDescCheck,LabelFor" />
 
     <Button
         android:id="@+id/button3"
