@@ -1,22 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="16dp">
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="false"
+        android:contentDescription="@string/imagem_com_livro_e_espada_de_rpg" />
+        app:srcCompat="@drawable/captura_de_tela_2024_11_19_142734" />
+
+
+    <TextView
+        android:id="@+id/tvTitle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/bem_vindo_a_nexus_rpg"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textSize="24sp" />
+
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Bem-vindo ao Criador de Personagens!"
-        android:textSize="18sp"
-        android:layout_marginBottom="20dp" />
+        android:layout_marginBottom="20dp"
+        android:text="@string/nexusrpg_um_app_para_cria_o_e_gest_o_de_fichas_de_rpg_combinando_facilidade_e_magia"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvTitle3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="@string/organize_suas_aventuras_com_poderosos_recursos_e_leve_seu_jogo_para_outra_dimens_o"
+        android:textSize="18sp" />
 
     <Button
         android:id="@+id/btnCreateCharacter"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Criar Personagem" />
+        android:text="@string/criar_personagem" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/purple_500"
+        android:textColor="@android:color/white"
+        android:text="@string/pr_ximo" />
 
 </LinearLayout>

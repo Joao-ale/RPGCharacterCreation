@@ -15,4 +15,10 @@
     <string name="label_vigor">Vigor</string>
     <string name="label_presence">Presença</string>
     <string name="defaultAttributesValues">1</string>
+    <string name="imagem_com_livro_e_espada_de_rpg">Imagem com livro e espada de RPG</string>
+    <string name="bem_vindo_a_nexus_rpg">Bem-vindo a Nexus RPG!</string>
+    <string name="nexusrpg_um_app_para_cria_o_e_gest_o_de_fichas_de_rpg_combinando_facilidade_e_magia">NexusRPG é um app para criação e gestão de fichas de RPG, combinando facilidade e magia.</string>
+    <string name="organize_suas_aventuras_com_poderosos_recursos_e_leve_seu_jogo_para_outra_dimens_o">Organize suas aventuras com poderosos recursos e leve seu jogo para outra dimensão.</string>
+    <string name="criar_personagem">Criar Personagem</string>
+    <string name="pr_ximo">Próximo</string>
 </resources>
