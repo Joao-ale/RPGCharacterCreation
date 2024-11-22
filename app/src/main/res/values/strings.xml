@@ -31,4 +31,10 @@
     <string name="campo_de_e_mail">Campo de e-mail</string>
     <string name="imagem_guerreiros_enfrentando_um_drag_o">Imagem guerreiros enfrentando um dragão</string>
     <string name="espada_e_livro_rpg">Espada e livro RPG</string>
+    <string name="lae_zel">Lae\'zel</string>
+    <string name="gale">Gale</string>
+    <string name="astarion">Astarion</string>
+    <string name="e_mail">E-mail</string>
+    <string name="seu_e_mail">Seu E-mail</string>
+    <string name="foto_do_personagem">Foto do personagem</string>
 </resources>
