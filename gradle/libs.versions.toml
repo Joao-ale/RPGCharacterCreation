@@ -16,7 +16,7 @@ room = "2.5.2"
 roomCompiler = "2.5.0"
 roomKtx = "2.6.1"
 roomRuntime = "2.6.1"
-ksp = "1.9.10-1.0.12"
+ksp = "2.0.21-1.0.27"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
