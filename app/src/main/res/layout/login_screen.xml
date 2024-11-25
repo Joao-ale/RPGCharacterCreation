@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#F5F5F5"
+    android:gravity="center_horizontal">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/imagem_guerreiros_enfrentando_um_drag_o"
+        app:srcCompat="@drawable/login_image"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/campo_de_e_mail"
+        android:textColor="#333"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:autofillHints="email"
+        android:hint="@string/e_mail"
+        android:contentDescription="@string/campo_de_e_mail"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        android:textColor="#000"
+        android:layout_marginBottom="16dp"
+        tools:ignore="ContentDescription" />
+
+    <TextView
+        android:id="@+id/passwordLabel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/campo_de_senha"
+        android:textColor="#333"
+        android:textSize="16sp"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="@string/senha"
+        android:autofillHints="password"
+        android:contentDescription="@string/campo_de_senha"
+        android:inputType="textPassword"
+        android:background="@drawable/rounded_edittext"
+        android:padding="12dp"
+        android:textColor="#000"
+        android:layout_marginBottom="24dp"
+        tools:ignore="ContentDescription" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_button"
+        android:textColor="@android:color/white"
+        android:text="@string/login"
+        android:fontFamily="sans-serif-medium" />
+</LinearLayout>

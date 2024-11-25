@@ -4,6 +4,9 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="purple_500">#6200EE</color>
+    <color name="darkPurple">#012061</color>
+    <color name="lightPurple">#5F2E96</color>
 
     <!-- Cores adicionais -->
     <color name="colorBackground">#FFFFFF</color>
