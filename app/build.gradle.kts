@@ -72,6 +72,7 @@ dependencies {
     implementation(libs.androidx.recyclerview)
     implementation(libs.gson)
     implementation(libs.androidx.cardview)
+    implementation(libs.androidx.constraintlayout)
     ksp(libs.androidx.room.compiler)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

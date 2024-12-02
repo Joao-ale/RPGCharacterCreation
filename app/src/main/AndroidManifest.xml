@@ -35,20 +35,20 @@
         android:exported="true"
         />
         <activity
-            android:name="com.fmu.rpgcharactercreation.service.CreateAccountActivity"
-            android:label="Create Account"
+            android:name="com.fmu.rpgcharactercreation.service.CharacterListActivity"
+            android:label="Create Character"
             android:theme="@style/Theme.AppCompat.Light"
             android:exported="true"
             />
         <activity
-            android:name="com.fmu.rpgcharactercreation.service.CharacterListActivity"
-            android:label="List Character"
+            android:name="com.fmu.rpgcharactercreation.service.CreateAccountActivity"
+            android:label="Create Character"
             android:theme="@style/Theme.AppCompat.Light"
             android:exported="true"
             />
         <activity
             android:name="com.fmu.rpgcharactercreation.service.LoginActivity"
-            android:label="Login in app"
+            android:label="Create Character"
             android:theme="@style/Theme.AppCompat.Light"
             android:exported="true"
             />

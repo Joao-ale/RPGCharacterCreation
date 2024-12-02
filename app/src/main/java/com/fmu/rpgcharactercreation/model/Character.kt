@@ -28,5 +28,5 @@ data class Character(
     val origin: Origin,
     val characterClass: CharacterClass,
     val imageUri: String?,
-    val userId: Int = 0
+    val userId: Int
 )

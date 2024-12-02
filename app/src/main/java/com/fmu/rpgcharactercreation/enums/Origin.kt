@@ -1,16 +1,16 @@
 package com.fmu.rpgcharactercreation.enums
 
 enum class Origin (val origin: String) {
-    ACADEMICIAN("Acadêmico"),
-    SALUTARY_AGENT("Agente de Saude"),
-    ARTIST("Artista"),
-    ATHLETE("Atleta"),
-    SCIENTIST_FORENSIC("Cientista Forense"),
-    CRIMINAL("Criminoso"),
-    WRITER("Escritor"),
-    JOURNALIST("Jornalista"),
-    FIGHTER("Lutador"),
-    MILITARY("Militar"),
-    IT("T.I"),
-    RELIGIOUS("Religioso")
+    ACADEMICIAN("ACADEMICIAN"),
+    SALUTARY_AGENT("SALUTARY_AGENT"),
+    ARTIST("ARTIST"),
+    ATHLETE("ATHLETE"),
+    SCIENTIST_FORENSIC("SCIENTIST_FORENSIC"),
+    CRIMINAL("CRIMINAL"),
+    WRITER("WRITER"),
+    JOURNALIST("JOURNALIST"),
+    FIGHTER("FIGHTER"),
+    MILITARY("MILITARY"),
+    IT("IT"),
+    RELIGIOUS("RELIGIOUS")
 }
