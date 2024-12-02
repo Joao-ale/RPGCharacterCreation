@@ -33,7 +33,7 @@
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:autofillHints="email"
-        android:hint="@string/e_mail"
+        android:hint="@string/email"
         android:contentDescription="@string/campo_de_e_mail"
         android:inputType="textEmailAddress"
         android:background="@drawable/rounded_edittext"
@@ -55,7 +55,7 @@
         android:id="@+id/editTextTextPassword"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:hint="@string/senha"
+        android:hint="@string/password"
         android:autofillHints="password"
         android:contentDescription="@string/campo_de_senha"
         android:inputType="textPassword"
@@ -66,11 +66,26 @@
         tools:ignore="ContentDescription" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/loggin_button"
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:background="@drawable/rounded_button"
         android:textColor="@android:color/white"
         android:text="@string/login"
         android:fontFamily="sans-serif-medium" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:background="@android:color/transparent" />
+
+    <Button
+        android:id="@+id/new_account_button"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_button"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/create_account_text"
+        android:textColor="@android:color/white" />
+
 </LinearLayout>

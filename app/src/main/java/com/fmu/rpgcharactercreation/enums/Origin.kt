@@ -1,0 +1,16 @@
+package com.fmu.rpgcharactercreation.enums
+
+enum class Origin (val origin: String) {
+    ACADEMICIAN("ACADEMICIAN"),
+    SALUTARY_AGENT("SALUTARY_AGENT"),
+    ARTIST("ARTIST"),
+    ATHLETE("ATHLETE"),
+    SCIENTIST_FORENSIC("SCIENTIST_FORENSIC"),
+    CRIMINAL("CRIMINAL"),
+    WRITER("WRITER"),
+    JOURNALIST("JOURNALIST"),
+    FIGHTER("FIGHTER"),
+    MILITARY("MILITARY"),
+    IT("IT"),
+    RELIGIOUS("RELIGIOUS")
+}

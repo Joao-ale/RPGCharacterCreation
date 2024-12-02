@@ -24,6 +24,28 @@
             android:autofillHints="name"
             android:hint="@string/hint_character_name" />
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_select_image" />
+
+        <!-- Exibição da imagem selecionada -->
+        <ImageView
+            android:id="@+id/imageViewCharacter"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:contentDescription="TODO"
+            android:src="@drawable/character_profile"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="16dp" />
+
+        <Button
+            android:id="@+id/btnSelectImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecionar Imagem"
+            android:layout_marginTop="16dp" />
+
         <!-- Campo para o Nome do Jogador -->
         <TextView
             android:layout_width="wrap_content"

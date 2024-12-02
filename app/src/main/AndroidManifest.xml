@@ -34,5 +34,23 @@
         android:theme="@style/Theme.AppCompat.Light"
         android:exported="true"
         />
+        <activity
+            android:name="com.fmu.rpgcharactercreation.service.CharacterListActivity"
+            android:label="Create Character"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:exported="true"
+            />
+        <activity
+            android:name="com.fmu.rpgcharactercreation.service.CreateAccountActivity"
+            android:label="Create Character"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:exported="true"
+            />
+        <activity
+            android:name="com.fmu.rpgcharactercreation.service.LoginActivity"
+            android:label="Create Character"
+            android:theme="@style/Theme.AppCompat.Light"
+            android:exported="true"
+            />
     </application>
 </manifest>
