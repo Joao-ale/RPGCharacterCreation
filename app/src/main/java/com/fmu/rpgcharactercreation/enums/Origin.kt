@@ -1,4 +1,4 @@
-package com.fmu.rpgcharactercreation.enum
+package com.fmu.rpgcharactercreation.enums
 
 enum class Origin (val origin: String) {
     ACADEMICIAN("Acadêmico"),

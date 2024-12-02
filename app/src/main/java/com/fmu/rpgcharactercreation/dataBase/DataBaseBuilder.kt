@@ -12,7 +12,7 @@ object DatabaseBuilder {
                 INSTANCE = Room.databaseBuilder(
                     context.applicationContext,
                     AppDatabase::class.java,
-                    "rpg_character_database"
+                    "rpg_database"
                 ).build()
             }
         }

@@ -1,41 +1,42 @@
 package com.fmu.rpgcharactercreation.converters
-
 import androidx.room.TypeConverter
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import com.fmu.rpgcharactercreation.enums.CharacterClass
+import com.fmu.rpgcharactercreation.enums.Origin
 import com.fmu.rpgcharactercreation.model.Attribute
-import com.fmu.rpgcharactercreation.enum.CharacterClass
-import com.fmu.rpgcharactercreation.enum.Origin
 
-class   Converters {
+class Converters {
+    private val gson = Gson()
+
     @TypeConverter
-    fun fromAttributesList(value: List<Attribute>): String {
-        return Gson().toJson(value)
+    fun fromAttributeList(attributes: List<Attribute>): String {
+        return gson.toJson(attributes)
     }
 
     @TypeConverter
-    fun toAttributesList(value: String): List<Attribute> {
-        val listType = object : TypeToken<List<Attribute>>() {}.type
-        return Gson().fromJson(value, listType)
+    fun toAttributeList(attributesJson: String): List<Attribute> {
+        val type = object : TypeToken<List<Attribute>>() {}.type
+        return gson.fromJson(attributesJson, type)
     }
 
     @TypeConverter
-    fun fromCharacterClass(value: CharacterClass): String {
-        return value.name
+    fun fromOrigin(origin: Origin): String {
+        return origin.origin
     }
 
     @TypeConverter
-    fun toCharacterClass(value: String): CharacterClass {
-        return CharacterClass.valueOf(value)
+    fun toOrigin(originName: String): Origin {
+        return Origin.valueOf(originName)
     }
 
     @TypeConverter
-    fun fromOrigin(value: Origin): String {
-        return value.name
+    fun fromCharacterClass(characterClass: CharacterClass): String {
+        return characterClass.description
     }
 
     @TypeConverter
-    fun toOrigin(value: String): Origin {
-        return Origin.valueOf(value)
+    fun toCharacterClass(className: String): CharacterClass {
+        return CharacterClass.valueOf(className)
     }
 }

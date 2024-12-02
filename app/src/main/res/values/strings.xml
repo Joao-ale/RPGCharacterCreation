@@ -25,8 +25,10 @@
     <string name="plus">+</string>
     <string name="texto_aqui">Texto aqui</string>
     <string name="email">Email</string>
-    <string name="senha">Senha</string>
+    <string name="password">Senha</string>
+    <string name="entry_password">Digite sua senha</string>
     <string name="login">Login</string>
+    <string name="new_account">Criar</string>
     <string name="campo_de_senha">Campo de senha</string>
     <string name="campo_de_e_mail">Campo de e-mail</string>
     <string name="imagem_guerreiros_enfrentando_um_drag_o">Imagem guerreiros enfrentando um dragão</string>
@@ -34,7 +36,13 @@
     <string name="lae_zel">Lae\'zel</string>
     <string name="gale">Gale</string>
     <string name="astarion">Astarion</string>
-    <string name="e_mail">E-mail</string>
-    <string name="seu_e_mail">Seu E-mail</string>
+    <string name="entry_email">Digite seu email</string>
     <string name="foto_do_personagem">Foto do personagem</string>
+    <string name="label_select_image">Selecione a foto do seu personagem</string>
+    <string name="btnSelectImage">Enviar imagem de personagem</string>
+    <string name="create_account_text">Criar Conta</string>
+    <string name="create_character_text">Criar Personagem</string>
+    <string name="ask_have_account_text">Já tem uma conta?</string>
+    <string name="character_name">Nome do personagem</string>
+    <string name="player_name">Nome do player\n</string>
 </resources>
